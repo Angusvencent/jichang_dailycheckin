@@ -41,5 +41,5 @@ except:
     content = '签到失败'
     print(content)
     if SCKEY != '':
-        push_url = 'https://sctapi.ftqq.com/{}.send?title=fenda签到&desp={}'.format(SCKEY, content)
+        push_url = 'https://api2.pushdeer.com/message/push?pushkey={}&text=fenda机场&desp={}&type=markdown'.format(SCKEY, content)
         requests.post(url=push_url)
