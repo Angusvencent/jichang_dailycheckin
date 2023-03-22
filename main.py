@@ -35,12 +35,12 @@ try:
     content = result['msg']
     # 进行推送
     if SCKEY != '':
-        push_url = 'https://api2.pushdeer.com/message/push?pushkey={}&text=ikuu机场签到&desp={}&type=markdown'.format(SCKEY, content)
+        push_url = 'https://sctapi.ftqq.com/{}.send?title=IKUUU33签到&desp={}'.format(SCKEY, content)
         requests.post(url=push_url)
         print('推送成功')
 except:
     content = '签到失败'
     print(content)
     if SCKEY != '':
-        push_url = 'https://api2.pushdeer.com/message/push?pushkey={}&text=ikuu机场签到&desp={}&type=markdown'.format(SCKEY, content)
+        push_url = 'https://sctapi.ftqq.com/{}.send?title=IKUUU33签到&desp={}'.format(SCKEY, content)
         requests.post(url=push_url)
